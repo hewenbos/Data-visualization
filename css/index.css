@@ -144,6 +144,7 @@
 }
 .Point h4{
     margin-bottom: 0.125rem;
+    font-size: 0.25rem;
 }
 .Point-view .charts{
 
@@ -173,40 +174,313 @@
 .map{
     height: 6.35rem;
     margin: 0.4375rem 0 0.25rem 0 ;
+    display: flex;
+    flex-direction: column;
 }
 
+.map h4{
+    font-size: 0.25rem;
+    padding: 0.125rem 0;
+}
+.map .chart{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 /* 用户 */
 .users{
     height: 4.125rem;
 }
-
-/* 订单 */
-.order{
-    height: 1.625rem;
+.users h4{
+    font-size: 0.25rem;
+    margin-bottom: 0.125rem;
 }
-
-/* 销售额 */
-.sales{
+.users .charts{
+    display: flex;
+    justify-content: space-between;
+}
+.users .bar{
+    width:6.5rem;
     height: 2.875rem;
 }
+.users .Point-count{
+    width: 2rem;
+    height: 2.875rem;
+    background: url(../images/rect.png) no-repeat 0 0 /contain;
+    font-size:0.225rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0.375rem 0.125rem;
+}
 
+.Point-view .Point-count .count-item h4{
+     margin-bottom: 0.125rem;
+}
+.Point-view .Point-count .count-item span{
+    color: #1950c4;
+}
+/* 订单 */
+.order{
+    height: 1.875rem;
+}
+.order .dateTab {
+    display: flex;
+
+}
+.order .dateTab span{
+    border-right: 0.0125rem solid #fff;
+    padding: 0 0.25rem;
+    font-size: 0.225rem;
+    cursor: pointer;
+    color:#1950c4 ;
+}
+.order .dateTab span.active{
+    font-size: 0.25rem;
+    color: #fff;
+}
+.order .dateTab span:last-child{
+    border: none;
+}
+.order .dateTab span:first-child{
+    padding-left: 0;
+}
+.order .count{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1875rem;
+}
+.order .count .item{
+    width: 50%;
+    font-size: 0.225rem;
+}
+.order .count .item span{
+    color: #4c9bfd;
+}
+/* 销售额 */
+.sales{
+    height: 2.75rem;
+    
+}
+.sales .inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.sales .unit{
+    position: absolute;
+    left: 0.375rem;
+    top:0.75rem;
+    font-size: 0.15rem;
+    color: #4c9bfd;
+}
+.sales .inner .charts {
+    height: 1.75rem;
+}
+.sales .Statistics{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.125rem;
+}
+.sales .Statistics h4{
+
+    font-size: 0.25rem;
+    border-right: 0.0125rem solid #fff;
+    padding-right: 0.225rem;
+}
+
+.Statistics span{
+    margin-left: 0.25rem;
+    font-size: 0.225rem;
+    cursor: pointer;
+     color: #4c9bfd;
+     padding: 0.0125rem 0.0375rem;
+     border-radius: 0.0375rem;
+}
+.Statistics span.active{
+   background-color: #4c9bfd;
+   color: #fff
+}
 
 /* 销售和渠道 */
 .sellAndchannel{
     display: flex;
 }
-.sell{
-    flex: 1;
-    height: 2.65rem;
-    margin-right: 0.25rem;
-}
 .channel{
     flex: 1;
-    height: 2.625rem;
+    height: 2.525rem;
+    margin-right: 0.25rem;
+}
+.channel h4{
+    font-size: 0.25rem;
+}
+.channel .cahrts{
+    width: 100%;
+
+height:2rem;
+}
+.sell{
+    flex: 1;
+    height: 2.525rem;
+}
+.sell h4{
+    font-size: 0.25rem;
+}
+.sell .inner {
+    display: flex;
+    flex-direction: column;
+}
+.sell .sales{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.375rem;
 }
 
+.sell .ecahrt{
+    width: 100%;
+    flex: 1;
+    position: relative;
+}
 
+.sell .ecahrt .gauge {
+    height: 100%;
+}
+
+.sell .ecahrt .progees{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+}
+.sell .ecahrt .progees small{
+    font-size: 0.225rem;
+}
+.sell .sales .item{
+    width: 50%;
+    font-size: 0.25rem;
+}
+
+.sell .sales .item .textBox{
+    width: 1.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.2rem;
+    color:#4c9bfd ;
+}
 /* 热榜 */
 .hot{
     height: 3.25rem;
+ 
+}
+.hot .inner {
+   
+    display: flex;
+    justify-content: space-between;
+}
+.hot h4{
+    font-size: 0.25rem;
+}
+
+
+
+.hot h4 span{
+    font-size: 0.2rem;
+}
+
+.hot .NationalHotList{
+    width: 1.5rem;
+    display: flex;
+    flex-direction: column; 
+}
+.hot .inner .NationalHotList .iconView .icon{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0.125rem 0 ;
+}
+
+.hot .NationalHotList .iconView .icon .iconText {
+    font-size: 0.2rem;
+    color:#4c9bfd;
+}
+
+.hot .NationalHotList .iconView .icon .icon-cup1{
+    font-size: 0.5rem;
+    color: #d93f36;
+
+}
+.hot .NationalHotList .iconView .icon .icon-cup2{
+    font-size: 0.5rem;
+    color: #68d8fe;
+}
+.hot .NationalHotList .iconView .icon .icon-cup3{
+    font-size: 0.5rem;
+    color: #4c9bfd;
+}
+
+.hot .ProvincialHotList{
+    width: 4.25rem;
+   
+}
+
+.hot .ProvincialHotList h4 {
+    height: 0.375rem;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hot .ProvincialHotList h4 span{
+    color: #4c9bfd;
+}
+
+.hot .ProvincialHotList .list{
+    display: flex;
+    width: 100%;
+}
+.hot .ProvincialHotList .list .list-left{
+    flex: 1;
+
+    height: 2rem;
+}
+.hot .ProvincialHotList .list .list-left .list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4c9bfd;
+    font-size: 0.2rem;
+    cursor: pointer;
+    height: 0.375rem;
+    padding: 0 0.125rem;
+}
+.hot .ProvincialHotList .list .list-left .list-item.active{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #a3c6f2;
+}
+.hot .ProvincialHotList .list  .list-item .icon-up{
+    color: #dc3c33;
+}
+.hot .ProvincialHotList .list  .list-item .icon-down{
+    color: #36be90;
+}
+
+.hot .ProvincialHotList .list .list-right{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #a3c6f2;
+}
+.hot .ProvincialHotList .list .list-right .list-item{
+ 
+   
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.2rem;
+    cursor: pointer;
+    height: 0.375rem;
+    padding: 0 0.125rem;
 }

@@ -12,6 +12,7 @@
     <script src="js/flexible.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    
 </head>
 
 <body>
@@ -267,36 +268,251 @@
                       
                     </div>
                 </div>
-            </div>
+            </div>dateTab
         </div>
 
         <!-- 第二列 -->
         <div class="cloum">
             <!-- 地图 -->
-            <div class="map">地图</div>
+            <div class="map">
+                <h4><span class="iconfont icon-cube"></span> 设备数据统计</h4>
+                <div class="chart" id="chartMap">
+                   
+                </div>
+            </div>
             <!-- 用户总量 -->
             <div class="users paner">
-                <div class="inner">用户总量</div>
+                <div class="inner">
+                    <h4>全国用户总量统计</h4>
+
+                    <div class="charts">
+                        <div class="bar" id="bar"></div>
+                        <div class="Point-count">
+                            <div class="count-item">
+                                <h4>120,899</h4>
+                                <div class="count-text">
+                                    <span class="iconfont icon-dot" style="color: #ed3f35"></span>
+                                    <span>用户总量</span>
+                                </div>
+                            </div>
+                            <div class="count-item">
+                                <h4>248</h4>
+                                <div class="count-text">
+                                    <span class="iconfont icon-dot" style="color:  #eacf19"></span>
+                                    <span>点位总数</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </div>
 
         <!-- 第三列 -->
         <div class="cloum">
             <!-- 订单 -->
-            <div class="order paner">订单</div>
+            <div class="order paner">
+                <div class="inner">
+                    <div class="dateTab">
+                        <span data-index="day365" class="active">365天</span>
+                        <span data-index="day90">90天</span>
+                        <span data-index="day30">30天</span>
+                        <span data-index="day1">24小时</span>
+                    </div>
+    
+                    <div class="count">
+                        <div class="item">
+                            <h4></h4>
+                            <span>
+                                 <span class="iconfont icon-dot" style="color: #ed3f35"></span>
+                                 订单量
+                            </span>
+                        </div>
+                        <div class="item">
+                            <h4></h4>
+                            <span>
+                                 <span class="iconfont icon-dot" style="color:  #eacf19"></span>
+                                 销售额(万元)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- 销售额 -->
-            <div class="sales paner">销售额</div>
+            <div class="sales paner">
+                <div class="inner">
+                    <div class="Statistics">
+                        <h4>
+                            销售额统计 
+                        </h4>
+                        <span data-index="year" class="active">年</span>
+                        <span data-index="quarter">季</span>
+                        <span data-index="month">月</span>
+                        <span data-index="week">周</span>
+                    </div>
+                    <div class="charts" id="line">
+                        
+                    </div>
+
+                    <span class="unit">单位(万)</span>
+                </div>
+            </div>
             <!-- 销售和渠道 -->
             <div class="sellAndchannel">
-                <!-- 销售 -->
-                <div class="sell paner">销售</div>
-                <!-- 渠道 -->
-                <div class="channel paner">渠道</div>
+               <!-- 渠道 -->
+                
+                <div class="channel paner">
+                   <div class="inner">
+                    <h4>渠道分布</h4>
+                    <div class="cahrts" id="radar"></div>
+                   </div>
+                </div>
+                 <!-- 销售 --> 
+                 <div class="sell paner">
+                    <div class="inner">
+                        <h4>销售进度</h4>
+
+                        <div class="ecahrt">
+                            <div class="progees">75 <small>%</small></div>
+                            <div class="gauge" id="gauge"></div>
+                        </div>
+                        
+                        <div class="sales">
+                            <div class="item">
+                                <h4>1,321</h4>
+                                <div class="textBox">
+                                    <span class="iconfont icon-dot"></span>
+                                    <span class="text">销售额(万元) </span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <h4>150%</h4>
+                                <div class="textBox">
+                                    <span class="iconfont icon-dot"></span>
+                                    <span class="text">同比销售</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             
             </div>
             <!-- 热榜 -->
-            <div class="hot paner">热榜</div>
+            <div class="hot paner">
+                <div class="inner">
+                    <div class="NationalHotList">
+                        <h4>全国热榜</h4>
+    
+                        <div class="iconView">
+                            <div class="icon">
+                                <span class="iconfont icon-cup1"></span>
+                                <div class="iconText">可爱多</div>
+                            </div>
+                            <div class="icon">
+                                <span class="iconfont icon-cup2"></span>
+                                <div class="iconText">哇哈哈</div>
+                            </div>
+                            <div class="icon">
+                                <span class="iconfont icon-cup3"></span>
+                                <div class="iconText">喜之郎</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="ProvincialHotList">
+                        <h4>各省热榜 <span>//近30日//</span></h4>
+                        <div class="list">
+                            <div class="list-left">
+                                <div class="list-item active" data-index="0">
+                                    <span class="position">北京</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-down"></span>
+                                    </div>
+                                </div>
+                                <div class="list-item" data-index="1">
+                                    <span class="position">河北</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up"></span>
+                                    </div>
+                                </div>
+                                <div class="list-item" data-index="2">
+                                    <span class="position">上海</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-down"></span>
+                                    </div>
+                                </div>
+                                <div class="list-item" data-index="3">
+                                    <span class="position">江苏</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up"></span>
+                                    </div>
+                                </div>
+                                <div class="list-item" data-index="4">
+                                    <span class="position">⼭东</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-down" ></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-right">
+
+                                <div class="list-item">
+                                    <span class="position">八喜</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up" ></span>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <span class="position">八喜</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up" ></span>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <span class="position">八喜</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up" ></span>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <span class="position">八喜</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up" ></span>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <span class="position">八喜</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up" ></span>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <span class="position">八喜</span>
+                                    <div class="heat">
+                                        <span class="heatNumber">25,179</span>
+                                        <span class="iconfont icon-up" ></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 </body>
-
+<script src="js/china.js"></script>
+    <script src="js/map.js"></script>
 </html>
